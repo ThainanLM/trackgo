@@ -1,0 +1,73 @@
+<ion-content [fullscreen]="true" class="custom-content">
+  <header class="header">
+      <ion-title slot="start">
+        registros
+      </ion-title>
+      <ion-button  [routerLink]="['/tabs/profile']" fill="outline" slot="end" class="custom-button">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        Perfil
+      </ion-button>
+      
+  </header>
+  <div class="btn-group">
+    <!-- Botão Semanal -->
+    <ion-button class="btn" (click)="toggleData('semanal')">
+      Corrida<ion-icon name="chevron-down-outline"></ion-icon>
+    </ion-button>
+  
+    <!-- Dados Semanal com animação -->
+    <div [ngClass]="{'show': showSemanalData}" *ngIf="showSemanalData" class="data-display">
+      <div class="data-item">
+        <span>12/08/24</span>
+        <span class="valor">{{semanalDistance}} Km</span>
+        <span class="valor">{{semanalDistance}} Kcal</span>
+        <span class="valor">{{semanalDistance}}Hrs</span>
+      </div>
+      
+    <div class="action-container">
+      
+      <button fill="outline"  slot="start" class="delete">
+      APAGAR
+      </button>
+      
+      <div class="media">
+        <span>Regular</span>
+      </div>  
+    </div>
+    
+      
+      
+  </div>
+  <!-- Botao de ciclismo -->
+  <ion-button class="btn" (click)="toggleData('semanal')">
+    Ciclismo<ion-icon name="chevron-down-outline"></ion-icon>
+  </ion-button>
+
+  <!-- Ciclismo  -->
+  <div [ngClass]="{'show': showSemanalData}" *ngIf="showSemanalData" class="data-display">
+    <div class="data-item">
+      <span>12/08/24</span>
+      <span class="valor">{{semanalDistance}} Km</span>
+      <span class="valor">{{semanalDistance}} Kcal</span>
+      <span class="valor">{{semanalDistance}}Hrs</span>
+    </div>
+    
+  <div class="action-container">
+    
+    <button fill="outline"  slot="start" class="delete">
+    APAGAR
+    </button>
+    
+    <div class="media">
+      <span>Regular</span>
+    </div>  
+  </div>
+  </div>
+  
+    <div class="no-register">
+      <span>SEM REGISTROS DE ATIVIDADES</span>
+    </div>
+  </div>
+  
+</ion-content>
+

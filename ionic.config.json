@@ -1,0 +1,7 @@
+{
+  "name": "trackgo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

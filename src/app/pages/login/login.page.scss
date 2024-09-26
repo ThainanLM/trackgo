@@ -1,0 +1,127 @@
+ion-content{
+    --background: linear-gradient(190deg, #848485, #45d6c6);
+    margin: 5px;
+}
+
+.input{
+    font-size: 300;
+    font-family: "Arimo", sans-serif;
+}
+
+.header {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.subTitle {
+    color: #dbff00;
+    font-size: 1.03rem;
+    margin-top: 35px;
+    font-family: "Jaturat", sans-serif;
+    font-style: italic;
+}
+
+.logo {
+    width: 120px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signupLink{
+    background: transparent;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    left: 0;
+    margin-top: 30px;
+    bottom: 220px;
+    width: 100%;
+    right: 0;
+    border: solid;
+    border-radius: 10px;
+    border-color: #000000;
+    font-size: 1rem;
+    font-family: "Arimo", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px;
+
+}
+
+ion-item{
+    --background: transparent;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    color: #000000;
+    .input {
+    font-weight: 600;
+    }
+    ion-icon{
+        color: #000000;
+    }
+}
+
+
+ion-button{
+    --background:#000000;
+    display: flex;
+    width: auto;
+    margin-top: 10px;
+    font-family: "Arimo", sans-serif;
+    border-radius: 5px;
+    color: #ffffff;
+    
+}
+
+.buttons{
+    display: grid;
+    gap: 5px;
+}
+
+.loginG{
+    --background: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.forgotpassword{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 35px;
+    a{
+        font-weight: 400;
+        font-size: 1rem;
+        text-decoration: none;
+        font-family: "Arimo", sans-serif;
+    }
+}
+
+.separador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .separete1,
+  .separete2 {
+    flex: 1;
+    height: 1px;
+    background-color: #000000;
+    margin: 0 10px;
+  }
+  
+  .ou {
+    margin: 0 10px;
+    white-space: nowrap;
+    font-family: "Arimo", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color: #000000;
+  }
+  

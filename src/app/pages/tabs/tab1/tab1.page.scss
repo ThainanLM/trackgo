@@ -1,0 +1,93 @@
+.custom-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+    background: #3a3636;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5px;
+    margin-top: 16px;
+  }
+  
+  ion-title {
+    font-family: "Magz", sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  
+  .custom-button {
+    --border-width: 1px;
+    --border-radius: 15px;
+    --border-color: #ffffff;
+    --color: #ffffff;
+    margin-left: auto;
+    text-transform: none;
+    font-family: "Arimo", sans-serif;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 0 5px;
+    margin-top: 55px;
+    text-transform: none;
+  }
+
+  .btn{
+    --background: #45d6c6;
+    --font-family: "Arimo", sans-serif;
+    --border-radius: 10px;
+    font-weight: bold;
+    text-transform: none;
+    width: 120px;
+    
+  }
+  
+  .data-display {
+    width: 100%;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-family: "Jaturat", sans-serif;
+  }
+  
+  .data-display.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .data-item {
+    display: flex;
+    
+    justify-content: space-between;
+    padding: 2px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-style: italic;
+    .valor{
+      background-color: #dbff00;
+      color: #000000;
+      padding: 2px;
+      border-radius: 5px;
+      text-transform: none;
+    }
+  }
+
+  .data-item span:first-child {
+    text-transform: uppercase;
+  }
+  
+  .divider {
+    background: 1px rgb(255, 255, 255);
+    margin: 10px 0;
+  }
+  
