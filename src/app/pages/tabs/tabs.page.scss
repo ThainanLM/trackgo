@@ -1,0 +1,14 @@
+ion-tab-button {
+    --color: white; /* Cor dos ícones e textos quando inativo */
+    --color-selected: #dbff00; /* Cor dos ícones e textos quando ativo */
+  }
+  
+  ion-tab-button:hover {
+    --color: #dbff00; /* Cor ao passar o dedo (hover) */
+  }
+  
+  ion-tab-bar {
+    --background: #000;
+    padding: 3px;
+  }
+  

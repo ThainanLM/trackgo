@@ -1,0 +1,66 @@
+<ion-content [fullscreen]="true" class="custom-content">
+  <header class="header">
+      <ion-title slot="start">
+        Progresso
+      </ion-title>
+      <ion-button  [routerLink]="['/tabs/profile']" fill="outline" slot="end" class="custom-button">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        Perfil
+      </ion-button>
+      
+  </header>
+
+  <div class="btn-group">
+    <!-- Botão Semanal -->
+    <ion-button class="btn" (click)="toggleData('semanal')">
+      Semanal<ion-icon name="chevron-down-outline"></ion-icon>
+    </ion-button>
+  
+    <!-- Dados Semanal com animação -->
+    <div [ngClass]="{'show': showSemanalData}" *ngIf="showSemanalData" class="data-display">
+      <div class="data-item">
+        <span>Distância</span>
+        <span class="valor">{{semanalDistance}} Km</span>
+      </div>
+      <hr class="divider">
+      <div class="data-item">
+        <span>Calorias</span>
+        <span class="valor">{{semanalCalories}} Kcal</span>
+      </div>
+      <hr class="divider">
+      <div class="data-item">
+        <span>Tempo Ativo</span>
+        <span class="valor">{{semanalActiveTime}} Hrs</span>
+      </div>
+      <hr class="divider">
+    </div>
+  
+    <!-- Botão Mensal -->
+    <ion-button class="btn" (click)="toggleData('mensal')">
+      Mensal<ion-icon name="chevron-down-outline"></ion-icon>
+    </ion-button>
+  
+    <!-- Dados Mensal com animação -->
+    <div [ngClass]="{'show': showMensalData}" *ngIf="showMensalData" class="data-display">
+      <div class="data-item">
+        <span>Distância</span>
+        <span class="valor">{{mensalDistance}} Km</span>
+      </div>
+      <hr class="divider">
+      <div class="data-item">
+        <span>Calorias</span>
+        <span class="valor">{{mensalCalories}} Kcal</span>
+      </div>
+      <hr class="divider">
+      <div class="data-item">
+        <span>Tempo Ativo</span>
+        <span class="valor">{{mensalActiveTime}} Hrs</span>
+      </div>
+      <hr class="divider">
+    </div>
+  </div>
+  
+  
+  
+  
+</ion-content>

@@ -1,0 +1,32 @@
+.custom-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+    background: #3a3636;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5px;
+    margin-top: 16px;
+  }
+  
+  ion-title {
+    font-family: "Magz", sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  
+  .custom-button {
+    --border-width: 1px;
+    --border-radius: 15px;
+    --border-color: #ffffff;
+    --color: #ffffff;
+    margin-left: auto;
+    text-transform: none;
+    font-family: "Arimo", sans-serif;
+  }

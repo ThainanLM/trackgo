@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true" class="custom-content">
+  <header class="header">
+      <ion-title slot="start">
+      minha conta
+      </ion-title>
+      <ion-button  [routerLink]="['/tabs/profile']" fill="outline" slot="end" class="custom-button">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        Perfil
+      </ion-button>
+  </header>
+  <div class="container">
+    <div class="row">
+        <span class="label">Usuário</span><span class="valor">user222</span>
+    </div>
+    <div class="row">
+        <span class="label">E-mail</span><span class="valor">userdssgmail.com</span>
+    </div>
+    <div class="row">
+        <span class="label">Distância Total</span><span class="valor">1.234 Km</span>
+    </div>
+    <div class="row">
+        <span class="label">Ritmo</span><span class="media">Regular</span>
+    </div>
+</div>
+<div class="btn-action">
+  <button class="alt-senha">Alterar senha</button>
+  <button class="logout">Sair da conta</button>
+</div>
+
+</ion-content>
