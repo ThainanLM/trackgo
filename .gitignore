@@ -1,0 +1,13 @@
+# Dependências do Node
+node_modules/
+
+# Build output
+dist/
+out/
+
+# Cache do Angular
+.angular/cache/
+
+# Arquivos do ambiente
+*.env
+*.local
