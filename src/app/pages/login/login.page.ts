@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AutheticationService } from 'src/app/authetication.service';
 import {Router} from '@angular/router';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 @Component({
   selector: 'app-login',
@@ -35,22 +36,27 @@ export class LoginPage implements OnInit {
   }
 
   async login(){
-    const loading = await this.loadingCtrl.create();
+    const auth = getAuth();
+    const email = this.loginForm.value.email; // Pegue o valor do email
+    const password = this.loginForm.value.password; // Pegue o valor da senha
+    
+    const loading = await this.loadingCtrl.create(); // Exibe o loading enquanto faz o login
     await loading.present();
-    if(this.loginForm?.valid){
-      const user = await this.authService.loginUser(this.loginForm.value.email,this.loginForm.value.password).catch((error) =>{
-        console.log(error);
-        loading.dismiss()
+    
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        loading.dismiss(); // Feche o loading se o login for bem-sucedido
+        this.router.navigate(['/tabs/tab1']); // Navegue para a tela desejada
       })
-
-      if(user){
-        loading.dismiss()
-        this.router.navigate(['/tabs/tab1'])
-      }else{
-        console.log('provide correct values');
-      }
-    }
+      .catch((error) => {
+        loading.dismiss(); // Feche o loading em caso de erro
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log('Login error:', errorCode, errorMessage);
+      });
   }
+  
 }
   
  

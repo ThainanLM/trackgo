@@ -34,22 +34,15 @@ export class SignupPage implements OnInit {
     return this.regForm?.controls;
   }
 
-  async signUp(){
-    const loading = await this.loadingCtrl.create();
-    await loading.present();
-    if(this.regForm?.valid){
-      const user = await this.authService.registerUser(this.regForm.value.email,this.regForm.value.password).catch((error) =>{
-        console.log(error);
-        loading.dismiss()
-      })
-
-      if(user){
-        loading.dismiss()
-        this.router.navigate(['/tabs/tab1'])
-      }else{
-        console.log('provide correct values');
+  async signUp() {
+    if (this.regForm.valid) {
+      const { email, password } = this.regForm.value;
+      try {
+        await this.authService.registerUser(email, password);
+        this.router.navigate(['/login']); // Redireciona após o registro
+      } catch (error) {
+        console.error('Erro ao registrar:', error);
       }
     }
   }
-
 }

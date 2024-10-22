@@ -6,17 +6,6 @@
   <form [formGroup]="regForm"  novalidate>
     <div class="ion-padding">
       <ion-item>
-        <ion-input  formControlName="fullname" placeholder="Nome de Usuário" class="input"></ion-input>
-        <ion-icon name="person-outline"></ion-icon>
-      </ion-item>
-
-      <div *ngIf="this.regForm.controls?.['fullname'].touched && this.regForm.controls?.['fullname'].invalid">
-        <ion-text *ngIf="errorControl.fullname.errors?.required">
-          Fullname is required
-        </ion-text>
-      </div>
-
-      <ion-item>
         <ion-input formControlName="email" placeholder="Email"  class="input"></ion-input>
         <ion-icon name="mail-outline"></ion-icon>
       </ion-item>
